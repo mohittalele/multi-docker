@@ -1,3 +1,6 @@
+// express server logic. Connect to Redis , Postgres and information broke to 
+// client reaact app.
+
 const keys = require('./keys');
 
 // Express App Setup

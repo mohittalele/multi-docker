@@ -21,3 +21,18 @@ after_success:
   - docker push mtalele/multi-nginx
   - docker push mtalele/multi-server
   - docker push mtalele/multi-client 
+
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-2
+  app: multi-docker
+  env: MultiDocker-env-1
+  bucket_name: elasticbeanstalk-us-east-2-973541247255
+  bucket_path : docker-Multi
+  on:
+    branch : master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+
+

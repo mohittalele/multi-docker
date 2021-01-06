@@ -1,3 +1,4 @@
+// Connect to Redis. Also calculation of fibonocci numbers .
 const keys = require('./keys');
 const redis = require('redis');
 

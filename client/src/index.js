@@ -1,3 +1,4 @@
+// This is React app. client Folder generated automatically using creat-react-app command
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';

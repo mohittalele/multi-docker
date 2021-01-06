@@ -6,6 +6,8 @@ services:
       - POSTGRES_PASSWORD=postgres_password
   redis:
     image: 'redis:latest'
+  # nginx is used for Routing to express server or react (client) 
+  # as per the default.conf file. The routing are placed in this file.  
   nginx:
     depends_on:
       - api
@@ -26,6 +28,7 @@ services:
       - /app/node_modules
       - ./server:/app
     environment:
+      # This syntax sets the variable at the run time 
       - REDIS_HOST=redis
       - REDIS_PORT=6379
       - PGUSER=postgres
